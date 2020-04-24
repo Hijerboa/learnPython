@@ -7,7 +7,11 @@ def printTable(tables):
 			else:
 				if len(tables[table][item]) > maxWidth[table]:
 					maxWidth[table] = len(tables[table][item])
-	print(maxWidth)
+	lengthOfTable = len(tables[0])
+	for rows in range(lengthOfTable):
+		for elements in range(len(tables)):
+			print(tables[elements][rows].rjust(maxWidth[elements]), end =" ")
+		print()
 
 tableData = [["apples", "oranges", "cherries", "banana"],
 			["Alice", "Bob", "Carol", "David"],
